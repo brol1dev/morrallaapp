@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.morralla"
+      "bundleIdentifier": "app.morralla"
     },
     "android": {
       "adaptiveIcon": {
@@ -24,6 +24,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "scheme": "morralla"
   }
 }
