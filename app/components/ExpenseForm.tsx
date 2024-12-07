@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { View, TextInput, Button } from 'react-native';
-import { Expense } from '../models/Expense';
+import React, { useState } from "react";
+import { View, TextInput, Button } from "react-native";
+import { Expense } from "../models/Expense";
 
 type Props = {
   onSubmit: (expense: Expense) => void;
 };
 
 export const ExpenseForm: React.FC<Props> = ({ onSubmit }) => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState("");
   const [date, setDate] = useState(new Date());
-  const [paymentMethod, setPaymentMethod] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState("");
 
   const handleSubmit = () => {
     const expense: Expense = {
@@ -29,7 +29,7 @@ export const ExpenseForm: React.FC<Props> = ({ onSubmit }) => {
 
   return (
     <View>
-      <TextInput 
+      <TextInput
         placeholder="Expense name"
         value={name}
         onChangeText={setName}
@@ -47,11 +47,11 @@ export const ExpenseForm: React.FC<Props> = ({ onSubmit }) => {
       />
       {/* TODO: Proper date picker */}
       <TextInput
-        placeholder="Payment method"  
+        placeholder="Payment method"
         value={paymentMethod}
         onChangeText={setPaymentMethod}
       />
       <Button title="Submit" onPress={handleSubmit} />
     </View>
   );
-}; 
+};

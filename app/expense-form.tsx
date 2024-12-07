@@ -1,6 +1,6 @@
-import { useRouter } from 'expo-router';
-import { ExpenseForm } from '../src/components/ExpenseForm';
-import { Expense } from '../src/models/Expense';
+import { useRouter } from "expo-router";
+import { ExpenseForm } from "./components/ExpenseForm";
+import { Expense } from "./models/Expense";
 
 export default function ExpenseFormScreen() {
   const router = useRouter();
@@ -11,4 +11,4 @@ export default function ExpenseFormScreen() {
   };
 
   return <ExpenseForm onSubmit={handleSubmit} />;
-} 
+}

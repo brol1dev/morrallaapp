@@ -1,8 +1,12 @@
-import { Redirect } from "expo-router";
-import { Stack } from "expo-router";
 import { Link } from "expo-router";
-import { View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 
-export default function Page() {
-  return <Text>Top-level page</Text>;
+export default function ExpenseListScreen() {
+  return (
+    <View>
+      <Text>Expense List</Text>
+      {/* TODO: Render list of expenses */}
+      <Link href="/expense-form">Add Expense</Link>
+    </View>
+  );
 }
