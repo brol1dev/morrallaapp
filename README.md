@@ -1,6 +1,6 @@
 # Morrallaapp
 
-Morrallaapp is a React Native app built with Expo that allows users to track their expenses and interact with an AI assistant to manage their finances.
+Morrallaapp is an app that allows users to track their expenses and interact with an AI assistant to manage their finances.
 
 ## Installation
 
