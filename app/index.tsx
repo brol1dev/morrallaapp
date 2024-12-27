@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import { useNavigation } from 'expo-router';
+import React, { useEffect, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function ExpenseTracker() {
   const [input, setInput] = useState('');
+  const navigation = useNavigation();
 
+  useEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, [navigation]);
+  
   // Example messages to show the UI
   const messages = [
     {
@@ -43,7 +52,7 @@ export default function ExpenseTracker() {
   ];
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#f8fafc' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#f8fafc' }}>
 
       {/* Messages Area */}
       <ScrollView style={{ flex: 1, padding: 16 }} contentContainerStyle={{ maxWidth: 640, marginHorizontal: 'auto', gap: 16 }}>
@@ -115,6 +124,6 @@ export default function ExpenseTracker() {
           Try: &quot;I spent $30 on groceries&quot; or &quot;Show my expenses for this week&quot;
         </Text>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
